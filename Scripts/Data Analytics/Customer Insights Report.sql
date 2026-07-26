@@ -72,6 +72,7 @@ WITH base_query AS
             WHEN customer_age BETWEEN 30 AND 39 THEN '30-39'
             WHEN customer_age BETWEEN 40 AND 49 THEN '40-49'
             WHEN customer_age BETWEEN 50 AND 60 THEN '50-60'
+			WHEN customer_age IS NULL THEN NULL
             ELSE 'Above 60'
         END age_group,
         CASE
